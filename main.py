@@ -86,7 +86,7 @@ class Diktynna:
         self.message['From'] = sender
         self.message['To'] = self.unparsed_emails[0]
         self.message['Date'] = email.utils.formatdate()
-        self.message['Message-ID'] = email.utils.make_msgid(domain='uniqlomanagement.com')
+        self.message['Message-ID'] = email.utils.make_msgid(domain='')
 
     def save_result(self):
         writer = pd.ExcelWriter('./Output/parsed_emails.xlsx', engine='xlsxwriter')

@@ -9,7 +9,7 @@ import email
 from xlsxwriter.utility import xl_col_to_name
 
 
-class Andromeda:
+class Diktynna:
 
     def __init__(self):
         """
@@ -18,7 +18,7 @@ class Andromeda:
         text: шаблоны писем
         parsed_emails: почты, на которые письма были отправлены
         """
-        print('Андромеда начала работу.')
+        print('Diktynna начала работу.')
         self.unparsed_emails = list()
         self.accounts = dict()
         self.parsed_emails = dict()
@@ -185,7 +185,7 @@ class Andromeda:
                                           [sg.Button('Parse', key='Parse_accounts')]])
 
         layout = [
-            [sg.Text('Andromeda v0.8', justification='c', font='TimesNewRoman 16')],
+            [sg.Text('Diktynna v0.8', justification='c', font='TimesNewRoman 16')],
             [sg.HSeparator()],
             [emails_part, accounts_part],
             [sg.HSeparator()],
@@ -240,6 +240,6 @@ class Andromeda:
                 break
 
 
-rocket = Andromeda()
+rocket = Diktynna()
 rocket.interface_and_work()
 

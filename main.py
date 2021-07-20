@@ -66,10 +66,8 @@ class Andromeda:
 
     def form_message(self, sender, name=None):
         self.message = copy.deepcopy(self.message_template)
-        print('Я здесь')
         print(sender, name)
         if '*name*' in self.message.get_content():
-            print('я зашел в цикл')
             contest_list = self.message.get_content().split(' ')
             for item in contest_list:
                 if item == '*name*,':
@@ -226,8 +224,6 @@ class Andromeda:
             elif event == 'Text':
                 event_chain += '\nСоздается шаблон'
                 window['Console'].update(event_chain)
-                if '*name*' in values['Text_of_the_letter']:
-                    print('я здесь')
                 self.text_handler(values['Head_of_the_letter'], values['Text_of_the_letter'])
 
                 event_chain += '\nШаблон создан'
